@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DF1044F230B767A002446B9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1044E230B767A002446B9 /* main.cpp */; };
+		5DF1045D230B7820002446B9 /* check.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1045C230B7820002446B9 /* check.cpp */; };
+		5DF10460230BEF04002446B9 /* buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1045F230BEF04002446B9 /* buffer.cpp */; };
+		5DF10464230BFEC6002446B9 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF10463230BFEC6002446B9 /* shader.cpp */; };
+		5DF1046D230C4607002446B9 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF1046C230C4606002446B9 /* libGLEW.2.1.0.dylib */; };
+		5DF10470230C4D12002446B9 /* sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1046F230C4D12002446B9 /* sprite.cpp */; };
+		5DF10473230C52B8002446B9 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5DF10472230C52B8002446B9 /* texture.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5DF10449230B767A002446B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5DF1044B230B767A002446B9 /* Invader_Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Invader_Game; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF1044E230B767A002446B9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5DF1045C230B7820002446B9 /* check.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = check.cpp; sourceTree = "<group>"; };
+		5DF1045E230B7CC3002446B9 /* check.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = check.h; sourceTree = "<group>"; };
+		5DF1045F230BEF04002446B9 /* buffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = buffer.cpp; sourceTree = "<group>"; };
+		5DF10461230BF392002446B9 /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		5DF10462230BFEBC002446B9 /* shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		5DF10463230BFEC6002446B9 /* shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		5DF10465230BFF27002446B9 /* vertex.shader */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; path = vertex.shader; sourceTree = "<group>"; };
+		5DF10466230BFF4A002446B9 /* fragment.shader */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; path = fragment.shader; sourceTree = "<group>"; };
+		5DF1046C230C4606002446B9 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../usr/local/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
+		5DF1046E230C4CFF002446B9 /* sprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sprite.h; sourceTree = "<group>"; };
+		5DF1046F230C4D12002446B9 /* sprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite.cpp; sourceTree = "<group>"; };
+		5DF10471230C52A7002446B9 /* texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
+		5DF10472230C52B8002446B9 /* texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DF10448230B767A002446B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF1046D230C4607002446B9 /* libGLEW.2.1.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DF10442230B767A002446B9 = {
+			isa = PBXGroup;
+			children = (
+				5DF1044D230B767A002446B9 /* Invader_Game */,
+				5DF1044C230B767A002446B9 /* Products */,
+				5DF1046B230C4606002446B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DF1044C230B767A002446B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1044B230B767A002446B9 /* Invader_Game */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DF1044D230B767A002446B9 /* Invader_Game */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1044E230B767A002446B9 /* main.cpp */,
+				5DF10472230C52B8002446B9 /* texture.cpp */,
+				5DF10471230C52A7002446B9 /* texture.h */,
+				5DF1046F230C4D12002446B9 /* sprite.cpp */,
+				5DF1046E230C4CFF002446B9 /* sprite.h */,
+				5DF1045F230BEF04002446B9 /* buffer.cpp */,
+				5DF10461230BF392002446B9 /* buffer.h */,
+				5DF1045C230B7820002446B9 /* check.cpp */,
+				5DF1045E230B7CC3002446B9 /* check.h */,
+				5DF10463230BFEC6002446B9 /* shader.cpp */,
+				5DF10462230BFEBC002446B9 /* shader.h */,
+				5DF10465230BFF27002446B9 /* vertex.shader */,
+				5DF10466230BFF4A002446B9 /* fragment.shader */,
+			);
+			path = Invader_Game;
+			sourceTree = "<group>";
+		};
+		5DF1046B230C4606002446B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1046C230C4606002446B9 /* libGLEW.2.1.0.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DF1044A230B767A002446B9 /* Invader_Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DF10452230B767A002446B9 /* Build configuration list for PBXNativeTarget "Invader_Game" */;
+			buildPhases = (
+				5DF10447230B767A002446B9 /* Sources */,
+				5DF10448230B767A002446B9 /* Frameworks */,
+				5DF10449230B767A002446B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Invader_Game;
+			productName = Invader_Game;
+			productReference = 5DF1044B230B767A002446B9 /* Invader_Game */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DF10443230B767A002446B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = Code44;
+				TargetAttributes = {
+					5DF1044A230B767A002446B9 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 5DF10446230B767A002446B9 /* Build configuration list for PBXProject "Invader_Game" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5DF10442230B767A002446B9;
+			productRefGroup = 5DF1044C230B767A002446B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DF1044A230B767A002446B9 /* Invader_Game */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DF10447230B767A002446B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF10460230BEF04002446B9 /* buffer.cpp in Sources */,
+				5DF1045D230B7820002446B9 /* check.cpp in Sources */,
+				5DF10464230BFEC6002446B9 /* shader.cpp in Sources */,
+				5DF10473230C52B8002446B9 /* texture.cpp in Sources */,
+				5DF1044F230B767A002446B9 /* main.cpp in Sources */,
+				5DF10470230C4D12002446B9 /* sprite.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5DF10450230B767A002446B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5DF10451230B767A002446B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5DF10453230B767A002446B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lglfw3",
+					"-lGLFW",
+					"-framework",
+					OpenGL,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					IOKit,
+					"-framework",
+					Cocoa,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DF10454230B767A002446B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					/usr/local/Cellar/glfw/3.3/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-lglfw3",
+					"-lGLFW",
+					"-framework",
+					OpenGL,
+					"-framework",
+					CoreVideo,
+					"-framework",
+					IOKit,
+					"-framework",
+					Cocoa,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DF10446230B767A002446B9 /* Build configuration list for PBXProject "Invader_Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF10450230B767A002446B9 /* Debug */,
+				5DF10451230B767A002446B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DF10452230B767A002446B9 /* Build configuration list for PBXNativeTarget "Invader_Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF10453230B767A002446B9 /* Debug */,
+				5DF10454230B767A002446B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DF10443230B767A002446B9 /* Project object */;
+}

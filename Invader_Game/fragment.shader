@@ -4,5 +4,5 @@ noperspective in vec2 TexCoord;
 out vec3 outColor;
 
 void main(){
-    outColor = texture(buffer,TexCoord).rbg;
+    outColor = texture(buffer,TexCoord).rgb;
 }

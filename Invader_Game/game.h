@@ -16,3 +16,4 @@ struct Game
     Player player;
 };
 
+void gameInit(Game& game, size_t buffer_width, size_t buffer_height);

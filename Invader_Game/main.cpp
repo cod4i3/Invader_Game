@@ -4,11 +4,12 @@
 #include "buffer.h"
 #include "sprite.h"
 #include "game.h"
-
+#include "controller.h"
 
 int main(){
     const size_t buffer_width = 224;
     const size_t buffer_height = 256;
+    int player_move_dir = 1;
     
     if(!glfwInit()) return -1;
     atexit(glfwTerminate);
@@ -84,6 +85,7 @@ int main(){
     gameInit(game, buffer_width, buffer_height);
     game.aliens = new Alien[game.num_aliens];
     
+    
     for(size_t yi = 0; yi < 5; ++yi)
     {
         for(size_t xi = 0; xi < 11; ++xi)
@@ -103,8 +105,10 @@ int main(){
             const Sprite& sprite = *alien_animation->frames[current_frame];
             buffer_draw_sprite(&buffer, sprite, alien.x, alien.y, rgb_to_uint32(128, 0, 0));
         }
+        
         buffer_draw_sprite(&buffer, player_sprite, game.player.x, game.player.y, rgb_to_uint32(128, 0, 0));
         ++alien_animation->time;
+
         if(alien_animation->time == alien_animation->num_frames * alien_animation->frame_duration)
         {
             if(alien_animation->loop) alien_animation->time = 0;
@@ -114,12 +118,15 @@ int main(){
                 alien_animation = nullptr;
             }
         }
+        
         glTexSubImage2D(
                         GL_TEXTURE_2D, 0, 0, 0,
                         buffer.width, buffer.height,
                         GL_RGBA, GL_UNSIGNED_INT_8_8_8_8,
                         buffer.data
                         );
+        
+        player_move_dir = player_controller(player_move_dir, game, player_sprite);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         glfwSwapBuffers(window);

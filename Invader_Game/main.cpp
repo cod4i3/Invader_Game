@@ -6,10 +6,12 @@
 #include "game.h"
 #include "controller.h"
 
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
+int move_dir = 0;
+
 int main(){
     const size_t buffer_width = 224;
     const size_t buffer_height = 256;
-    int player_move_dir = 1;
     
     if(!glfwInit()) return -1;
     atexit(glfwTerminate);
@@ -69,17 +71,24 @@ int main(){
     glDisable(GL_DEPTH_TEST);
     glBindVertexArray(fullscreen_triangle_vao);
     
+    glfwSetKeyCallback(window, key_callback);
+    
+    
+    
     Sprite player_sprite;
     PlayerInit(player_sprite);
+    
     Sprite alien_sprite0;
-    alien_spriteInit0(alien_sprite0);
     Sprite alien_sprite1;
+    alien_spriteInit0(alien_sprite0);
     alien_spriteInit1(alien_sprite1);
+    
     SpriteAnimation* alien_animation = new SpriteAnimation;
     alien_animationInit(alien_animation);
     alien_animation->frames = new Sprite*[2];
     alien_animation->frames[0] = &alien_sprite0;
     alien_animation->frames[1] = &alien_sprite1;
+    
     
     Game game;
     gameInit(game, buffer_width, buffer_height);
@@ -95,6 +104,8 @@ int main(){
         }
     }
     
+    
+    int player_move_dir = 0;
     while(!glfwWindowShouldClose(window)){
         buffer_clear(&buffer, clear_color);
         
@@ -126,7 +137,8 @@ int main(){
                         buffer.data
                         );
         
-        player_move_dir = player_controller(player_move_dir, game, player_sprite);
+        player_move_dir = move_dir * 2;
+        player_controller(player_move_dir, game, player_sprite);
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         glfwSwapBuffers(window);
@@ -147,4 +159,18 @@ int main(){
     delete alien_animation;
     
     return 0;
+}
+
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
+    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, GL_TRUE);
+    if (key == GLFW_KEY_RIGHT){
+        if(action == GLFW_PRESS) move_dir += 1;
+        else if(action == GLFW_RELEASE) move_dir -= 1;
+    }
+    if (key == GLFW_KEY_LEFT){
+        if(action == GLFW_PRESS) move_dir -= 1;
+        else if(action == GLFW_RELEASE) move_dir += 1;
+    }
 }

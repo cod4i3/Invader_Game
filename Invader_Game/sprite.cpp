@@ -15,7 +15,43 @@ void PlayerInit(Sprite& player_sprite){
     };
 }
 
+
+
+// インベーダーたちのスプライト
 void alien_spriteInit0(Sprite& alien_sprite){
+    alien_sprite.width = 8;
+    alien_sprite.height = 8;
+    alien_sprite.data = new uint8_t[8 * 8]
+    {
+        0,0,0,1,1,0,0,0, // ...@@...
+        0,0,1,1,1,1,0,0, // ..@@@@..
+        0,1,1,1,1,1,1,0, // .@@@@@@.
+        1,1,0,1,1,0,1,1, // @@.@@.@@
+        1,1,1,1,1,1,1,1, // @@@@@@@@
+        0,1,0,1,1,0,1,0, // .@.@@.@.
+        1,0,0,0,0,0,0,1, // @......@
+        0,1,0,0,0,0,1,0  // .@....@.
+    };
+
+}
+
+void alien_spriteInit1(Sprite& alien_sprite){
+    alien_sprite.width = 8;
+    alien_sprite.height = 8;
+    alien_sprite.data = new uint8_t[8 * 8]
+    {
+        0,0,0,1,1,0,0,0, // ...@@...
+        0,0,1,1,1,1,0,0, // ..@@@@..
+        0,1,1,1,1,1,1,0, // .@@@@@@.
+        1,1,0,1,1,0,1,1, // @@.@@.@@
+        1,1,1,1,1,1,1,1, // @@@@@@@@
+        0,0,1,0,0,1,0,0, // ..@..@..
+        0,1,0,1,1,0,1,0, // .@.@@.@.
+        1,0,1,0,0,1,0,1  // @.@..@.@
+    };
+}
+
+void alien_spriteInit2(Sprite& alien_sprite){
     alien_sprite.width = 11;
     alien_sprite.height = 8;
     alien_sprite.data = new uint8_t[11 * 8]
@@ -29,12 +65,13 @@ void alien_spriteInit0(Sprite& alien_sprite){
         1,0,1,0,0,0,0,0,1,0,1, // @.@.....@.@
         0,0,0,1,1,0,1,1,0,0,0  // ...@@.@@...
     };
+
 }
 
-void alien_spriteInit1(Sprite& alien_sprite){
+void alien_spriteInit3(Sprite& alien_sprite){
     alien_sprite.width = 11;
     alien_sprite.height = 8;
-    alien_sprite.data = new uint8_t[88]
+    alien_sprite.data = new uint8_t[11 * 8]
     {
         0,0,1,0,0,0,0,0,1,0,0, // ..@.....@..
         1,0,0,1,0,0,0,1,0,0,1, // @..@...@..@
@@ -47,12 +84,75 @@ void alien_spriteInit1(Sprite& alien_sprite){
     };
 }
 
+void alien_spriteInit4(Sprite& alien_sprite){
+    alien_sprite.width = 12;
+    alien_sprite.height = 8;
+    alien_sprite.data = new uint8_t[12 * 8]
+    {
+        0,0,0,0,1,1,1,1,0,0,0,0, // ....@@@@....
+        0,1,1,1,1,1,1,1,1,1,1,0, // .@@@@@@@@@@.
+        1,1,1,1,1,1,1,1,1,1,1,1, // @@@@@@@@@@@@
+        1,1,1,0,0,1,1,0,0,1,1,1, // @@@..@@..@@@
+        1,1,1,1,1,1,1,1,1,1,1,1, // @@@@@@@@@@@@
+        0,0,0,1,1,0,0,1,1,0,0,0, // ...@@..@@...
+        0,0,1,1,0,1,1,0,1,1,0,0, // ..@@.@@.@@..
+        1,1,0,0,0,0,0,0,0,0,1,1  // @@........@@
+    };
+
+}
+
+void alien_spriteInit5(Sprite& alien_sprite){
+    alien_sprite.width = 12;
+    alien_sprite.height = 8;
+    alien_sprite.data = new uint8_t[12 * 8]
+    {
+        0,0,0,0,1,1,1,1,0,0,0,0, // ....@@@@....
+        0,1,1,1,1,1,1,1,1,1,1,0, // .@@@@@@@@@@.
+        1,1,1,1,1,1,1,1,1,1,1,1, // @@@@@@@@@@@@
+        1,1,1,0,0,1,1,0,0,1,1,1, // @@@..@@..@@@
+        1,1,1,1,1,1,1,1,1,1,1,1, // @@@@@@@@@@@@
+        0,0,1,1,1,0,0,1,1,1,0,0, // ..@@@..@@@..
+        0,1,1,0,0,1,1,0,0,1,1,0, // .@@..@@..@@.
+        0,0,1,1,0,0,0,0,1,1,0,0  // ..@@....@@..
+    };
+
+}
+
+void alien_death_spriteInit(Sprite& alien_sprite){
+    alien_sprite.width = 13;
+    alien_sprite.height = 7;
+    alien_sprite.data = new uint8_t[13 * 7]
+    {
+        0,1,0,0,1,0,0,0,1,0,0,1,0, // .@..@...@..@.
+        0,0,1,0,0,1,0,1,0,0,1,0,0, // ..@..@.@..@..
+        0,0,0,1,0,0,0,0,0,1,0,0,0, // ...@.....@...
+        1,1,0,0,0,0,0,0,0,0,0,1,1, // @@.........@@
+        0,0,0,1,0,0,0,0,0,1,0,0,0, // ...@.....@...
+        0,0,1,0,0,1,0,1,0,0,1,0,0, // ..@..@.@..@..
+        0,1,0,0,1,0,0,0,1,0,0,1,0  // .@..@...@..@.
+    };
+}
+
 void alien_animationInit(SpriteAnimation*& alien_animation){
     alien_animation->loop = true;
     alien_animation->num_frames = 2;
     alien_animation->frame_duration = 10;
     alien_animation->time = 0;
 }
+
+void bullet_spriteInit(Sprite& bullet_sprite){
+    bullet_sprite.width = 1;
+    bullet_sprite.height = 3;
+    bullet_sprite.data = new uint8_t[3]
+    {
+        1, // @
+        1, // @
+        1  // @
+    };
+}
+
+
+
 
 void buffer_draw_sprite(Buffer* buffer, const Sprite& sprite,
                         size_t x, size_t y, uint32_t color

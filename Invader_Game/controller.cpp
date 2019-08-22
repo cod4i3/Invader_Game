@@ -15,3 +15,12 @@ void player_controller(int player_move_dir, Game& game, Sprite& player_sprite){
     }
 }
 
+void bullet_controller(Game& game, Sprite& bullet_sprite, int bi){
+    game.bullets[bi].y += game.bullets[bi].dir;
+    if(game.bullets[bi].y >= game.height ||
+       game.bullets[bi].y < bullet_sprite.height)
+    {
+        game.bullets[bi] = game.bullets[game.num_bullets - 1];
+        --game.num_bullets;
+    }
+}
